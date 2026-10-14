@@ -195,29 +195,41 @@
             color: var(--accent-color);
         }
 
-        .skills-grid {
+        .skills-grid, .certs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
 
-        .skill-card {
+        .skill-card, .cert-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1.5rem;
         }
 
-        .skill-card h3 {
+        .skill-card h3, .cert-card h3 {
             font-size: 1.15rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .skill-card h3 i {
+        .skill-card h3 i, .cert-card h3 i {
             color: var(--accent-color);
+        }
+
+        .cert-issuer {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .cert-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
         .badges {
@@ -375,6 +387,7 @@
             <ul class="nav-links">
                 <li><a href="#about">Profilo</a></li>
                 <li><a href="#skills">Competenze</a></li>
+                <li><a href="#certifications">Certificazioni</a></li>
                 <li><a href="#projects">Progetti</a></li>
                 <li><a href="#experience">Esperienze</a></li>
                 <li><a href="#contact">Contatti</a></li>
@@ -462,6 +475,27 @@
         </div>
     </section>
 
+    <section id="certifications">
+        <h2 class="section-title"><i class="fas fa-certificate"></i> Certificazioni & Qualifiche</h2>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <h3><i class="fas fa-database"></i> DBA Administrator (IFTS)</h3>
+                <div class="cert-issuer">Almaviva Digital Tech / Percorso IFTS</div>
+                <p class="cert-desc">Specializzazione tecnica nell'amministrazione di database relazionali complessi, gestione flussi ETL e ottimizzazione delle query su PostgreSQL.</p>
+            </div>
+            <div class="cert-card">
+                <h3><i class="fas fa-code"></i> Full Stack Java Developer Academy</h3>
+                <div class="cert-issuer">Form and Job (240 Ore)</div>
+                <p class="cert-desc">Formazione specialistica intensiva sullo sviluppo di applicazioni enterprise con Java 21, Spring Boot 3, Angular 17 e containerizzazione Docker.</p>
+            </div>
+            <div class="cert-card">
+                <h3><i class="fas fa-robot"></i> Python & Machine Learning Academy</h3>
+                <div class="cert-issuer">GI Group / Forma.Temp</div>
+                <p class="cert-desc">Corso professionalizzante focalizzato su analisi dati, manipolazione con Pandas/NumPy, modelli predittivi in Scikit-learn e API con FastAPI.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <h2 class="section-title"><i class="fas fa-folder-open"></i> Progetti in Evidenza</h2>
         <div class="projects-grid">
@@ -538,21 +572,12 @@
             </div>
         </div>
 
-        <h2 class="section-title" style="margin-top: 4rem;"><i class="fas fa-graduation-cap"></i> Formazione</h2>
+        <h2 class="section-title" style="margin-top: 4rem;"><i class="fas fa-graduation-cap"></i> Formazione Scolastica</h2>
         <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-role">Academy Full Stack Developer</div>
-                <div class="timeline-company">Form and Job</div>
-                <div class="timeline-desc">Sviluppo enterprise con Java 21, Spring Boot 3, Angular 17, TypeScript, Docker e JUnit 5.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-role">Academy Python & Machine Learning</div>
-                <div class="timeline-company">IT Consulting</div>
-                <div class="timeline-desc">Analisi dati con Pandas/NumPy, Machine Learning con Scikit-learn e backend predittivo in FastAPI.</div>
-            </div>
             <div class="timeline-item">
                 <div class="timeline-role">Diploma di Perito Informatico</div>
                 <div class="timeline-company">I.T.I.S. "Enrico Medi"</div>
+                <div class="timeline-desc">Fondamenti di informatica, reti, programmazione e sistemi.</div>
             </div>
         </div>
     </section>
