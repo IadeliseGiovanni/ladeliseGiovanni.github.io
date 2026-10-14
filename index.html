@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanni Iadelise | Backend & Full-Stack Developer</title>
+    
+    <!-- Script per bloccare il salto ad #experience all'apertura e pulire l'URL -->
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+        if (window.location.hash) {
+            history.replaceState(null, null, window.location.pathname);
+        }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -129,22 +141,21 @@
             width: 260px;
             height: 260px;
             border-radius: 50%;
-            position: relative;
             border: 4px solid var(--accent-color);
             box-shadow: 0 0 30px rgba(63, 185, 80, 0.2);
+            position: relative;
         }
 
         .hero-avatar {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 0;
-            border: none;
-            box-shadow: none;
+            position: absolute !important;
+            width: 150% !important;
+            height: 150% !important;
+            max-width: none !important;
+            object-fit: cover !important;
+            object-position: center 10% !important;
+            transform: scale(1.8) !important;
+            border: none !important;
+            box-shadow: none !important;
         }
 
         .btn {
@@ -414,7 +425,7 @@
             </div>
         </div>
         <div class="hero-image-container">
-            <img src="https://i.ibb.co/gL9hdX0H/profile.jpg?v=105" alt="Giovanni Iadelise" class="hero-avatar">
+            <img src="https://i.ibb.co/gL9hdX0H/profile.jpg?v=109" alt="Giovanni Iadelise" class="hero-avatar">
         </div>
     </section>
 
@@ -611,14 +622,5 @@
         <p>&copy; 2026 Giovanni Iadelise. Tutti i diritti riservati.</p>
     </footer>
 
-    <script>
-        // Pulisce l'ancora dall'URL all'avvio e forza l'inizio pulito dall'hero
-        window.addEventListener('load', function() {
-            if (window.location.hash) {
-                history.replaceState(null, null, window.location.pathname);
-                window.scrollTo({ top: 0, behavior: 'instant' });
-            }
-        });
-    </script>
 </body>
 </html>
